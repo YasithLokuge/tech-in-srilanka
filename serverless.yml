@@ -8,11 +8,12 @@ provider:
   environment:
     BUFFER_ACCESS_TOKEN: ${file(./env.yml):prod.bufferAccessToken}
     BUFFER_FACEBOOK_ID: ${file(./env.yml):prod.bufferFacebookId}
-    BUFFER_LINKEDIN_ID: ${file(./env.yml):prod.bufferLinkedinId}
+    BUFFER_TWITTER_ID: ${file(./env.yml):prod.bufferTwitterId}
+    BUFFER_INSTAGRAM_ID: ${file(./env.yml):prod.bufferInstagramId}
 
 functions:
   publish:
     handler: handler.publish
-    # timeout: 10
-    # events:
-    #   - schedule: rate(1 hour)
+    timeout: 10
+    events:
+      - schedule: rate(1 hour)
