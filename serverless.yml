@@ -16,4 +16,4 @@ functions:
     handler: handler.publish
     timeout: 10
     events:
-      - schedule: rate(1 hour)
+      - schedule: rate(4 hours)
