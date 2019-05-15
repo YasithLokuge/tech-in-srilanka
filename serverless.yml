@@ -9,3 +9,10 @@ provider:
     BUFFER_ACCESS_TOKEN: ${file(./env.yml):prod.bufferAccessToken}
     BUFFER_FACEBOOK_ID: ${file(./env.yml):prod.bufferFacebookId}
     BUFFER_LINKEDIN_ID: ${file(./env.yml):prod.bufferLinkedinId}
+
+functions:
+  publish:
+    handler: handler.publish
+    # timeout: 10
+    # events:
+    #   - schedule: rate(1 hour)
